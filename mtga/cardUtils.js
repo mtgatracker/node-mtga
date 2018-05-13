@@ -14,21 +14,30 @@ allCards.addCards(rivals_of_ixalan.get("cards"))
 allCards.addCards(ixalan.get("cards"))
 
 let cardColors = cardID => {
-  let card = allCards.findCard(cardID)
-  if (!card) {
-    console.log(`UNKNOWN CARD ID: ${cardID}`)
-    return []
-  }
-  return card.get("colors")
+  return new Promise((resolve, reject) => {
+    let card = allCards.findCard(cardID)
+    if (!card) {
+      console.log(`UNKNOWN CARD ID: ${cardID}`)
+      resolve([])
+    }
+    resolve(card.get("colors"))
+  })
 }
 
 let cardsColors = cardIDs => {
   return new Promise((resolve, reject) => {
     let colors = new Set()
+    let allPromises = []
     cardIDs.filter(cardID => cardID != -1).forEach(cardID => {
-      cardColors(cardID).forEach(color => colors.add(color))
+      let cardPromise = cardColors(cardID)
+      allPromises.push(cardPromise)
+      cardPromise.then(cardColors => {
+        cardColors.forEach(color => colors.add(color))
+      })
     })
-    resolve(colors)
+    Promise.all(allPromises).then(r => {
+      resolve(colors)
+    })
   })
 }
 
