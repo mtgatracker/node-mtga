@@ -1,0 +1,25 @@
+{
+  "name": "mtga",
+  "version": "1.0.0",
+  "description": "MTGA card details as backbone models",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shawkinsl/node-mtga.git"
+  },
+  "keywords": [
+    "mtga",
+    "mtg",
+    "json",
+    "mtgjson"
+  ],
+  "author": "shawkins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shawkinsl/node-mtga/issues"
+  },
+  "homepage": "https://github.com/shawkinsl/node-mtga#readme"
+}
