@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/shawkinsl/node-mtga/issues"
   },
-  "homepage": "https://github.com/shawkinsl/node-mtga#readme"
+  "homepage": "https://github.com/shawkinsl/node-mtga#readme",
+  "dependencies": {
+    "backbone": "^1.3.3"
+  }
 }
