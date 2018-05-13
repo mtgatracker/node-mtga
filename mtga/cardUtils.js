@@ -5,7 +5,7 @@ const { dominaria } = require("./dom")
 const { rivals_of_ixalan } = require('./rix')
 const { ixalan } = require("./xln")
 
-const allCards = new CardPool({cards: [], name: "all_cards"})
+const allCards = new CardPool({cards: {}, name: "all_cards"})
 
 allCards.addCards(amonkhet.get("cards"))
 allCards.addCards(hour_of_devastation.get("cards"))

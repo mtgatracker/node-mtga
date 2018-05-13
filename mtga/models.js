@@ -25,15 +25,16 @@ const CardPool = backbone.Model.extend({
     if(err.length) return err  // checkpoint
   },
   findCard: function(mtgaID) {
-    return this.get("cards").find(ci => ci && ci.get("mtgaID") == mtgaID)
+    return this.get("cards")[mtgaID]
   },
   addCard: function(card) {
-    this.get("cards").push(card)
+    let mtgaID = card.get("mtgaID")
+    this.get("cards")[mtgaID] = card
   },
   addCards: function(cards) {
     let me = this;
     cards.forEach(function(card) {
-      me.get("cards").push(...cards)
+      me.get("cards")[card.get("mtgaID")] = card
     })
   }
 })
