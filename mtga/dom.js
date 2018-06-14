@@ -1,6 +1,7 @@
 const { CardPool, Card } = require('./models.js')
 
 let dominaria = new CardPool({name: "dominaria", cards: []})
+
 dominaria.addCard(new Card({ mtgaID: 67106, setNumber: 1, name: "karn_scion_of_urza", prettyName: "Karn, Scion of Urza", cardType: "Legendary Planeswalker", set: "DOM", subTypes: "Karn", colorIdentity: [], colors: ['Colorless'], cost: ['4'] }))
 dominaria.addCard(new Card({ mtgaID: 67108, setNumber: 2, name: "adamant_will", prettyName: "Adamant Will", cardType: "Instant", set: "DOM", subTypes: "", colorIdentity: ['W'], colors: ['White'], cost: ['1', 'W'] }))
 dominaria.addCard(new Card({ mtgaID: 67110, setNumber: 3, name: "aven_sentry", prettyName: "Aven Sentry", cardType: "Creature", set: "DOM", subTypes: "Bird Soldier", colorIdentity: ['W'], colors: ['White'], cost: ['3', 'W'] }))
@@ -281,4 +282,6 @@ dominaria.addCard(new Card({ mtgaID: 67658, setNumber: 277, name: "karplusan_hou
 dominaria.addCard(new Card({ mtgaID: 67660, setNumber: 278, name: "pyromantic_pilgrim", prettyName: "Pyromantic Pilgrim", cardType: "Creature", set: "DOM", subTypes: "Human Wizard", colorIdentity: ['R'], colors: ['Red'], cost: ['2', 'R'] }))
 dominaria.addCard(new Card({ mtgaID: 67662, setNumber: 279, name: "timber_gorge", prettyName: "Timber Gorge", cardType: "Land", set: "DOM", subTypes: "", colorIdentity: ['R', 'G'], colors: ['Red', 'Green'], cost: [] }))
 dominaria.addCard(new Card({ mtgaID: 67664, setNumber: 280, name: "firesong_and_sunspeaker", prettyName: "Firesong and Sunspeaker", cardType: "Legendary Creature", set: "DOM", subTypes: "Minotaur Cleric", colorIdentity: ['W', 'R'], colors: ['Red', 'White'], cost: ['4', 'R', 'W'] }))
+
+
 module.exports = { dominaria: dominaria }

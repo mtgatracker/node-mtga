@@ -4,6 +4,10 @@ const { hour_of_devastation } = require("./hou")
 const { dominaria } = require("./dom")
 const { rivals_of_ixalan } = require('./rix')
 const { ixalan } = require("./xln")
+const { kaladesh } = require("./kld")
+const { aether_revolt } = require("./aer")
+const { welcome_decks_2017 } = require("./w17")
+const { weird } = require("./wrd")
 
 const allCards = new CardPool({cards: {}, name: "all_cards"})
 
@@ -12,6 +16,10 @@ allCards.addCards(hour_of_devastation.get("cards"))
 allCards.addCards(dominaria.get("cards"))
 allCards.addCards(rivals_of_ixalan.get("cards"))
 allCards.addCards(ixalan.get("cards"))
+allCards.addCards(kaladesh.get("cards"))
+allCards.addCards(aether_revolt.get("cards"))
+allCards.addCards(welcome_decks_2017.get("cards"))
+allCards.addCards(weird.get("cards"))
 
 let cardColors = cardID => {
   return new Promise((resolve, reject) => {

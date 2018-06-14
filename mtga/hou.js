@@ -1,6 +1,7 @@
 const { CardPool, Card } = require('./models.js')
 
 let hour_of_devastation = new CardPool({name: "hour_of_devastation", cards: []})
+
 hour_of_devastation.addCard(new Card({ mtgaID: 65479, setNumber: 1, name: "act_of_heroism", prettyName: "Act of Heroism", cardType: "Instant", set: "HOU", subTypes: "", colorIdentity: ['W'], colors: ['White'], cost: ['1', 'W'] }))
 hour_of_devastation.addCard(new Card({ mtgaID: 65481, setNumber: 2, name: "adorned_pouncer", prettyName: "Adorned Pouncer", cardType: "Creature", set: "HOU", subTypes: "Cat", colorIdentity: ['W'], colors: ['White'], cost: ['1', 'W'] }))
 hour_of_devastation.addCard(new Card({ mtgaID: 65483, setNumber: 3, name: "angel_of_condemnation", prettyName: "Angel of Condemnation", cardType: "Creature", set: "HOU", subTypes: "Angel", colorIdentity: ['W'], colors: ['White'], cost: ['2', 'W', 'W'] }))
@@ -220,4 +221,6 @@ hour_of_devastation.addCard(new Card({ mtgaID: 65953, setNumber: 208, name: "vis
 hour_of_devastation.addCard(new Card({ mtgaID: 65955, setNumber: 209, name: "cinder_barrens", prettyName: "Cinder Barrens", cardType: "Land", set: "HOU", subTypes: "", colorIdentity: ['B', 'R'], colors: ['Red', 'Black'], cost: [] }))
 hour_of_devastation.addCard(new Card({ mtgaID: 65957, setNumber: 9, name: "disposal_mummy", prettyName: "Disposal Mummy", cardType: "Creature", set: "HOU", subTypes: "Zombie Jackal", colorIdentity: ['W'], colors: ['White'], cost: ['2', 'W'] }))
 hour_of_devastation.addCard(new Card({ mtgaID: 65959, setNumber: 169, name: "crypt_of_the_eternals", prettyName: "Crypt of the Eternals", cardType: "Land", set: "HOU", subTypes: "", colorIdentity: ['U', 'B', 'R'], colors: ['Red', 'Black', 'Blue'], cost: [] }))
+
+
 module.exports = { hour_of_devastation: hour_of_devastation }

@@ -1,6 +1,7 @@
 const { CardPool, Card } = require('./models.js')
 
 let rivals_of_ixalan = new CardPool({name: "rivals_of_ixalan", cards: []})
+
 rivals_of_ixalan.addCard(new Card({ mtgaID: 66619, setNumber: 1, name: "baffling_end", prettyName: "Baffling End", cardType: "Enchantment", set: "RIX", subTypes: "", colorIdentity: ['W'], colors: ['White'], cost: ['1', 'W'] }))
 rivals_of_ixalan.addCard(new Card({ mtgaID: 66621, setNumber: 2, name: "bishop_of_binding", prettyName: "Bishop of Binding", cardType: "Creature", set: "RIX", subTypes: "Vampire Cleric", colorIdentity: ['W'], colors: ['White'], cost: ['3', 'W'] }))
 rivals_of_ixalan.addCard(new Card({ mtgaID: 66623, setNumber: 3, name: "blazing_hope", prettyName: "Blazing Hope", cardType: "Instant", set: "RIX", subTypes: "", colorIdentity: ['W'], colors: ['White'], cost: ['W'] }))
@@ -213,4 +214,6 @@ rivals_of_ixalan.addCard(new Card({ mtgaID: 67035, setNumber: 202, name: "angrat
 rivals_of_ixalan.addCard(new Card({ mtgaID: 67037, setNumber: 203, name: "swab_goblin", prettyName: "Swab Goblin", cardType: "Creature", set: "RIX", subTypes: "Goblin Pirate", colorIdentity: ['R'], colors: ['Red'], cost: ['1', 'R'] }))
 rivals_of_ixalan.addCard(new Card({ mtgaID: 67039, setNumber: 204, name: "angraths_fury", prettyName: "Angrath's Fury", cardType: "Sorcery", set: "RIX", subTypes: "", colorIdentity: ['B', 'R'], colors: ['Red', 'Black'], cost: ['3', 'B', 'R'] }))
 rivals_of_ixalan.addCard(new Card({ mtgaID: 67041, setNumber: 205, name: "cinder_barrens", prettyName: "Cinder Barrens", cardType: "Land", set: "RIX", subTypes: "", colorIdentity: ['B', 'R'], colors: ['Red', 'Black'], cost: [] }))
+
+
 module.exports = { rivals_of_ixalan: rivals_of_ixalan }

@@ -1,6 +1,7 @@
 const { CardPool, Card } = require('./models.js')
 
 let ixalan = new CardPool({name: "ixalan", cards: []})
+
 ixalan.addCard(new Card({ mtgaID: 65961, setNumber: 1, name: "adanto_vanguard", prettyName: "Adanto Vanguard", cardType: "Creature", set: "XLN", subTypes: "Vampire Soldier", colorIdentity: ['W'], colors: ['White'], cost: ['1', 'W'] }))
 ixalan.addCard(new Card({ mtgaID: 65963, setNumber: 2, name: "ashes_of_the_abhorrent", prettyName: "Ashes of the Abhorrent", cardType: "Enchantment", set: "XLN", subTypes: "", colorIdentity: ['W'], colors: ['White'], cost: ['1', 'W'] }))
 ixalan.addCard(new Card({ mtgaID: 65965, setNumber: 3, name: "axis_of_mortality", prettyName: "Axis of Mortality", cardType: "Enchantment", set: "XLN", subTypes: "", colorIdentity: ['W'], colors: ['White'], cost: ['4', 'W', 'W'] }))
@@ -300,4 +301,6 @@ ixalan.addCard(new Card({ mtgaID: 66553, setNumber: 286, name: "huatlis_snubhorn
 ixalan.addCard(new Card({ mtgaID: 66555, setNumber: 287, name: "huatlis_spurring", prettyName: "Huatli's Spurring", cardType: "Instant", set: "XLN", subTypes: "", colorIdentity: ['R'], colors: ['Red'], cost: ['R'] }))
 ixalan.addCard(new Card({ mtgaID: 66557, setNumber: 288, name: "sunblessed_mount", prettyName: "Sun-Blessed Mount", cardType: "Creature", set: "XLN", subTypes: "Dinosaur", colorIdentity: ['W', 'R'], colors: ['Red', 'White'], cost: ['3', 'R', 'W'] }))
 ixalan.addCard(new Card({ mtgaID: 66559, setNumber: 289, name: "stone_quarry", prettyName: "Stone Quarry", cardType: "Land", set: "XLN", subTypes: "", colorIdentity: ['R', 'W'], colors: ['Red', 'White'], cost: [] }))
+
+
 module.exports = { ixalan: ixalan }
