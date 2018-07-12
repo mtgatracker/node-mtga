@@ -1,6 +1,6 @@
 {
   "name": "mtga",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "MTGA card details as backbone models",
   "main": "index.js",
   "scripts": {

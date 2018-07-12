@@ -7,6 +7,8 @@ const { ixalan } = require("./xln")
 const { kaladesh } = require("./kld")
 const { aether_revolt } = require("./aer")
 const { welcome_decks_2017 } = require("./w17")
+const { core_set_2019 } = require("./m19")
+const { arena_exclusives } = require("./ana")
 const { weird } = require("./wrd")
 
 const allCards = new CardPool({cards: {}, name: "all_cards"})
@@ -19,6 +21,8 @@ allCards.addCards(ixalan.get("cards"))
 allCards.addCards(kaladesh.get("cards"))
 allCards.addCards(aether_revolt.get("cards"))
 allCards.addCards(welcome_decks_2017.get("cards"))
+allCards.addCards(core_set_2019.get("cards"))
+allCards.addCards(arena_exclusives.get("cards"))
 allCards.addCards(weird.get("cards"))
 
 let cardColors = cardID => {
