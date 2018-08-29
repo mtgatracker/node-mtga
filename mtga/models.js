@@ -12,6 +12,7 @@ const Card = backbone.Model.extend({
     if (attr.subTypes === undefined) err.push("must have subTypes")
     if (!Array.isArray(attr.colorIdentity)) err.push("must have a colorIdentity")
     if (!Array.isArray(attr.colors)) err.push("must have a colors")
+    if (attr.rarity === undefined) err.push("must have rarity")
     if (!Array.isArray(attr.cost)) err.push("must have a cost")
     if(err.length) return err  // checkpoint
   }
