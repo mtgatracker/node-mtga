@@ -10,6 +10,7 @@ const { welcome_decks_2017 } = require("./w17")
 const { core_set_2019 } = require("./m19")
 const { arena_exclusives } = require("./ana")
 const { weird } = require("./wrd")
+const { guilds_of_ravnica } = require("./grn")
 
 const allCards = new CardPool({cards: {}, name: "all_cards"})
 
@@ -24,6 +25,7 @@ allCards.addCards(welcome_decks_2017.get("cards"))
 allCards.addCards(core_set_2019.get("cards"))
 allCards.addCards(arena_exclusives.get("cards"))
 allCards.addCards(weird.get("cards"))
+allCards.addCards(guilds_of_ravnica.get("cards"))
 
 let cardColors = cardID => {
   return new Promise((resolve, reject) => {
