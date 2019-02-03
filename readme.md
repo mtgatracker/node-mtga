@@ -9,3 +9,13 @@ const { allCards } = require("mtga")
 let card = allCards.findCard(67134)  // dub
 console.log(card.get("prettyName"))
 ```
+
+
+### deploying
+
+because I always forget
+
+```bash
+# update version in package.json
+npm publish
+```

@@ -1,9 +1,9 @@
 ### MODIFY THESE
 
-SET_NAME = "guilds_of_ravnica"
-SET_ACRONYM = "grn"
-from mtga.set_data import grn as mtg_set
-cards = mtg_set.GuildsOfRavnica.cards_in_set
+SET_NAME = "ravnica_allegiance"
+SET_ACRONYM = "rna"
+from mtga.set_data import rna as mtg_set
+cards = mtg_set.RavnicaAllegiance.cards_in_set
 
 ### END MODIFY
 
@@ -19,8 +19,8 @@ footer = """module.exports = {{ {}: {} }}""".format(SET_NAME, SET_NAME)
 total_str = header
 
 for card in cards:
-    card_fstr = '{}.addCard(new Card({{ mtgaID: {}, setNumber: {}, name: "{}", prettyName: "{}", cardType: "{}", set: "{}", subTypes: "{}", colorIdentity: {}, colors: {}, rarity: "{}", cost: {} }}))'
-    card_line = card_fstr.format(SET_NAME, card.mtga_id, card.set_number, card.name, card.pretty_name, card.card_type, card.set, card.sub_types, card.color_identity, card.colors, card.rarity, card.cost)
+    card_fstr = '{}.addCard(new Card({{ mtgaID: {}, setNumber: {}, name: "{}", prettyName: "{}", cardType: "{}", set: "{}", subTypes: "{}", colorIdentity: {}, colors: {}, rarity: "{}", cost: {}, collectible: {} }}))'
+    card_line = card_fstr.format(SET_NAME, card.mtga_id, card.set_number, card.name, card.pretty_name, card.card_type, card.set, card.sub_types, card.color_identity, card.colors, card.rarity, card.cost, str(card.collectible).lower())
     total_str += card_line + "\n"
 
 total_str += "\n\n" + footer
