@@ -1,33 +1,36 @@
 var { CardPool } = require("./models.js")
-const { amonkhet } = require("./akh")
-const { hour_of_devastation } = require("./hou")
 const { dominaria } = require("./dom")
 const { rivals_of_ixalan } = require('./rix')
 const { ixalan } = require("./xln")
-const { kaladesh } = require("./kld")
-const { aether_revolt } = require("./aer")
-const { welcome_decks_2017 } = require("./w17")
 const { core_set_2019 } = require("./m19")
 const { arena_exclusives } = require("./ana")
-const { weird } = require("./wrd")
 const { guilds_of_ravnica } = require("./grn")
 const { ravnica_allegiance } = require("./rna")
 
+// Deprecated: these may come back someday, but for now disable them
+//const { amonkhet } = require("./akh")
+//const { hour_of_devastation } = require("./hou")
+//const { kaladesh } = require("./kld")
+//const { aether_revolt } = require("./aer")
+//const { welcome_decks_2017 } = require("./w17")
+//const { weird } = require("./wrd")
+
 const allCards = new CardPool({cards: {}, name: "all_cards"})
 
-allCards.addCards(amonkhet.get("cards"))
-allCards.addCards(hour_of_devastation.get("cards"))
 allCards.addCards(dominaria.get("cards"))
 allCards.addCards(rivals_of_ixalan.get("cards"))
 allCards.addCards(ixalan.get("cards"))
-allCards.addCards(kaladesh.get("cards"))
-allCards.addCards(aether_revolt.get("cards"))
-allCards.addCards(welcome_decks_2017.get("cards"))
 allCards.addCards(core_set_2019.get("cards"))
 allCards.addCards(arena_exclusives.get("cards"))
-allCards.addCards(weird.get("cards"))
 allCards.addCards(guilds_of_ravnica.get("cards"))
 allCards.addCards(ravnica_allegiance.get("cards"))
+
+//allCards.addCards(amonkhet.get("cards"))
+//allCards.addCards(hour_of_devastation.get("cards"))
+//allCards.addCards(kaladesh.get("cards"))
+//allCards.addCards(aether_revolt.get("cards"))
+//allCards.addCards(welcome_decks_2017.get("cards"))
+//allCards.addCards(weird.get("cards"))
 
 let cardColors = cardID => {
   return new Promise((resolve, reject) => {

@@ -19,8 +19,8 @@ footer = """module.exports = {{ {}: {} }}""".format(SET_NAME, SET_NAME)
 total_str = header
 
 for card in cards:
-    card_fstr = '{}.addCard(new Card({{ mtgaID: {}, setNumber: {}, name: "{}", prettyName: "{}", cardType: "{}", set: "{}", subTypes: "{}", colorIdentity: {}, colors: {}, rarity: "{}", cost: {} }}))'
-    card_line = card_fstr.format(SET_NAME, card.mtga_id, card.set_number, card.name, card.pretty_name, card.card_type, card.set, card.sub_types, card.color_identity, card.colors, card.rarity, card.cost)
+    card_fstr = '{}.addCard(new Card({{ mtgaID: {}, setNumber: {}, name: "{}", prettyName: "{}", cardType: "{}", set: "{}", subTypes: "{}", colorIdentity: {}, colors: {}, rarity: "{}", cost: {}, collectible: {} }}))'
+    card_line = card_fstr.format(SET_NAME, card.mtga_id, card.set_number, card.name, card.pretty_name, card.card_type, card.set, card.sub_types, card.color_identity, card.colors, card.rarity, card.cost, str(card.collectible).lower())
     total_str += card_line + "\n"
 
 total_str += "\n\n" + footer

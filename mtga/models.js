@@ -8,6 +8,7 @@ const Card = backbone.Model.extend({
     if (attr.name === undefined) err.push("must have name")
     if (attr.prettyName === undefined) err.push("must have prettyName")
     if (attr.set === undefined) err.push("must have set")
+    if (attr.collectible === undefined) err.push("must have collectible")
     if (attr.setNumber === undefined) err.push("must have setNumber")
     if (attr.subTypes === undefined) err.push("must have subTypes")
     if (!Array.isArray(attr.colorIdentity)) err.push("must have a colorIdentity")
