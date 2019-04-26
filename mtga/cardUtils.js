@@ -6,7 +6,7 @@ const { core_set_2019 } = require("./m19")
 const { arena_exclusives } = require("./ana")
 const { guilds_of_ravnica } = require("./grn")
 const { ravnica_allegiance } = require("./rna")
-const { war_of_the_spark } = require("./rna")
+const { war_of_the_spark } = require("./war")
 
 // Deprecated: these may come back someday, but for now disable them
 //const { amonkhet } = require("./akh")
