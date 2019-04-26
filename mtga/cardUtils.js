@@ -6,6 +6,7 @@ const { core_set_2019 } = require("./m19")
 const { arena_exclusives } = require("./ana")
 const { guilds_of_ravnica } = require("./grn")
 const { ravnica_allegiance } = require("./rna")
+const { war_of_the_spark } = require("./rna")
 
 // Deprecated: these may come back someday, but for now disable them
 //const { amonkhet } = require("./akh")
@@ -24,6 +25,7 @@ allCards.addCards(core_set_2019.get("cards"))
 allCards.addCards(arena_exclusives.get("cards"))
 allCards.addCards(guilds_of_ravnica.get("cards"))
 allCards.addCards(ravnica_allegiance.get("cards"))
+allCards.addCards(war_of_the_spark.get("cards"))
 
 //allCards.addCards(amonkhet.get("cards"))
 //allCards.addCards(hour_of_devastation.get("cards"))

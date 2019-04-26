@@ -1,9 +1,9 @@
 ### MODIFY THESE
 
-SET_NAME = "ravnica_allegiance"
-SET_ACRONYM = "rna"
-from mtga.set_data import rna as mtg_set
-cards = mtg_set.RavnicaAllegiance.cards_in_set
+SET_NAME = "war_of_the_spark"
+SET_ACRONYM = "war"
+from mtga.set_data import war as mtg_set
+cards = mtg_set.WarOfTheSpark.cards_in_set
 
 ### END MODIFY
 
