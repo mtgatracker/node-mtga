@@ -1,9 +1,9 @@
 ### MODIFY THESE
 
-SET_NAME = "war_of_the_spark"
-SET_ACRONYM = "war"
-from mtga.set_data import war as mtg_set
-cards = mtg_set.WarOfTheSpark.cards_in_set
+SET_NAME = "core_set_2020"
+SET_ACRONYM = "m20"
+from mtga.set_data import m20 as mtg_set
+cards = mtg_set.CoreSet2020.cards_in_set
 
 ### END MODIFY
 
