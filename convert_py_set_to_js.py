@@ -1,9 +1,9 @@
 ### MODIFY THESE
 
-SET_NAME = "core_set_2020"
-SET_ACRONYM = "m20"
-from mtga.set_data import m20 as mtg_set
-cards = mtg_set.CoreSet2020.cards_in_set
+SET_NAME = "throne_of_eldraine"
+SET_ACRONYM = "eld"
+from mtga.set_data import all_mtga_cards
+cards = [card for card in all_mtga_cards.cards if card.set == SET_ACRONYM.upper()]
 
 ### END MODIFY
 
